@@ -1,0 +1,24 @@
+<h3>Edit album details</h3>
+
+<p>Album ID: <%=@artist.id%></p>
+
+<p>Artist: <%=@artist.id%></p>
+
+<form action="/albums/<%=@album.id %>" method="post"> <!-- put will be performed when form submitted, but we need to enter 'post' here -->
+
+<input type="hidden" name="_method" value="put"> <!--we need this so sinatra can make the put method work, as browsers don't support put-->
+
+  <label for="name">Album name:</label>
+  <input type="text" name="name" value="<%=@album.name%>"></input>
+
+  <input type="submit" value="Update Album"></input>
+
+</form>
+
+<form action="/albums/<%=@album.id%>" method="post">
+
+<input type="hidden" name="_method" value="delete" />
+
+<input type="submit" value="Delete album">
+
+</form>

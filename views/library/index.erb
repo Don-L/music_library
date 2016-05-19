@@ -1,0 +1,8 @@
+<h3 class="index">Library</h3>
+
+<% @artists.each do |artist| %>
+<p class = "libart"><a href="../artists/<%=artist.id%>"><%=artist.name%></a></p>
+<%Album.find_by_artist(artist.id).each do |album|%>
+<p class = "libalb"><a href="/albums/<%=album.id%>"><%=album.name%></a><p>
+<%end%>
+<%end%>

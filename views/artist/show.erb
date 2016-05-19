@@ -1,0 +1,7 @@
+<p>Artist ID: <%=@artist.id%></p>
+<p>Artist Name: <%=@artist.name%></p>
+<p><a href="<%=@artist.id%>/edit">Edit/delete</a></p>
+<h3>Albums:</h3>
+<%@albums.each do |album|%>
+<p><a href="/albums/<%=album.id%>"><%=album.name%></a></p>
+<%end%>
